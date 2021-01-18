@@ -18,6 +18,10 @@ namespace Book_Rental_System
         public string Password, UserType;
         SqlConnection SqlConn = new SqlConnection("Data Source=DPKASTG-05\\SQLEXPRESS;Initial Catalog=LibrarySystem;Integrated Security=True");
 
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -36,10 +40,16 @@ namespace Book_Rental_System
             try
             {
                 SqlStr.Connection = SqlConn;
-                SqlStmt = "Select FullName, usertype from Users u Inner Join Login l  on u.Username = l.username where l.username = '" + UserName + "' and l.password = '" + Password + "'";
-                SqlStr.CommandText = SqlStmt;
-                SqlConn.Open();
-                SqlReader = SqlStr.ExecuteReader();
+                SqlStmt = "Select FullName, usertype from Users u Inner Join Login l  on u.Username = l.username where l.username = @UserName and l.password = @Password";
+
+                using (SqlCommand cmd = new SqlCommand(SqlStmt, SqlConn))
+                {
+                    cmd.Parameters.AddWithValue("@UserName", UserName);
+                    cmd.Parameters.AddWithValue("@Password", Password);
+                    SqlConn.Open();
+                    SqlReader = cmd.ExecuteReader();
+                }
+
 
                 if (SqlReader.HasRows)
                 {

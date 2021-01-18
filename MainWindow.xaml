@@ -13,5 +13,6 @@
         <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="370,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="370,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="226,268,0,0" VerticalAlignment="Top" Width="264" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="226,343,0,0" VerticalAlignment="Top" Width="264" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogout_Click" />
     </Grid>
 </Window>
