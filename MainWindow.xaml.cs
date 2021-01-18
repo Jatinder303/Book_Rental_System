@@ -14,8 +14,8 @@ namespace Book_Rental_System
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
-        public string UserName;
-        public string Password;
+        public string UserName, FullName;
+        public string Password, UserType;
         SqlConnection SqlConn = new SqlConnection("Data Source=DPKASTG-05\\SQLEXPRESS;Initial Catalog=LibrarySystem;Integrated Security=True");
 
 
@@ -36,7 +36,7 @@ namespace Book_Rental_System
             try
             {
                 SqlStr.Connection = SqlConn;
-                SqlStmt = "Select * from Login where username = '" + UserName + "' and password = '" + Password + "'";
+                SqlStmt = "Select FullName, usertype from Users u Inner Join Login l  on u.Username = l.username where l.username = '" + UserName + "' and l.password = '" + Password + "'";
                 SqlStr.CommandText = SqlStmt;
                 SqlConn.Open();
                 SqlReader = SqlStr.ExecuteReader();
@@ -44,10 +44,32 @@ namespace Book_Rental_System
                 if (SqlReader.HasRows)
                 {
                     MessageBox.Show("Login Successful");
+                    SqlReader.Read();
+                    FullName = SqlReader[0].ToString();
+                    UserType = SqlReader[1].ToString();
 
-                    Dashboard dash = new Dashboard(UserName);
-                    dash.UserName = UserName;
-                    dash.Show();
+
+
+                    if (UserType == "Admin")
+
+                    {
+
+                        AdminDashboard admin = new AdminDashboard(FullName);
+                        admin.FullName = FullName;
+                        admin.Show();
+
+                    }
+
+                    else
+
+                    {
+
+                        Dashboard dash = new Dashboard(FullName);
+                        dash.FullName = FullName;
+                        dash.Show();
+
+                    }
+
                     SqlConn.Close();
                     Hide();
                 }

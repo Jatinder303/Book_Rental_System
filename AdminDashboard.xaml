@@ -1,17 +1,16 @@
-﻿<Window x:Class="Book_Rental_System.Dashboard"
+﻿<Window x:Class="Book_Rental_System.AdminDashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book_Rental_System"
         mc:Ignorable="d"
-        Title="Book Rental System - Dashboard Page" Height="450" Width="800">
+        Title="Book Rental System - Admin Dashboard Page" Height="450" Width="800">
     <Grid Background="#FFF1B55E">
-        <Button x:Name="btnBorrow" Content="Borrow" HorizontalAlignment="Left" Margin="27,22,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6"/>
         <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="604,22,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnReturn_Click"/>
-        <Button x:Name="btnEditProfile" Content="Edit Profile" HorizontalAlignment="Left" Margin="27,355,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6"/>
         <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="604,355,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogout_Click"/>
         <Label x:Name="lbl_WelcomeText" Content="Welcome to Book Rental System" HorizontalAlignment="Left" Margin="227,214,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
         <Label x:Name="lblName" Content="Hi" HorizontalAlignment="Left" Margin="227,186,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
+
     </Grid>
 </Window>

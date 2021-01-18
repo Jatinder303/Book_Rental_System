@@ -3,18 +3,17 @@
 namespace Book_Rental_System
 {
     /// <summary>
-    /// Interaction logic for Dashboard.xaml
+    /// Interaction logic for AdminDashboard.xaml
     /// </summary>
-    public partial class Dashboard : Window
+    public partial class AdminDashboard : Window
     {
         public string FullName;
-        public Dashboard(string fullName)
+        public AdminDashboard(string fullName)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             FullName = fullName;
             lblName.Content = "Hi " + FullName;
-
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
