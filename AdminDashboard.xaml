@@ -7,10 +7,45 @@
         mc:Ignorable="d"
         Title="Book Rental System - Admin Dashboard Page" Height="450" Width="800">
     <Grid Background="#FFF1B55E">
-        <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="604,22,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnReturn_Click"/>
-        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="604,355,0,0" VerticalAlignment="Top" Width="134" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogout_Click"/>
-        <Label x:Name="lbl_WelcomeText" Content="Welcome to Book Rental System" HorizontalAlignment="Left" Margin="227,214,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
-        <Label x:Name="lblName" Content="Hi" HorizontalAlignment="Left" Margin="227,186,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
+        <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="592,10,0,0" VerticalAlignment="Top" Width="86" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnReturn_Click"/>
+        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Width="88" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogout_Click"/>
+        <Label x:Name="lbl_WelcomeText" Content="Welcome to Book Rental System" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
+        <Label x:Name="lblName" Content="Hi" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
+        <TabControl x:Name="Main_TabControl" HorizontalAlignment="Left" Height="355" Margin="10,54,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem x:Name="tabItem_Books" Header="Books">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="lbl_BookNameSearch" Content="Book Name" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Top" Width="135"/>
+                    <TextBox x:Name="txt_BookNameSearch" HorizontalAlignment="Left" Height="23" Margin="162,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402"/>
+                    <Button x:Name="btn_Search" Content="Search" HorizontalAlignment="Left" Margin="605,10,0,0" VerticalAlignment="Top" Width="112"/>
+                    <DataGrid x:Name="DGV_Books" HorizontalAlignment="Left" Height="215" Margin="27,41,0,0" VerticalAlignment="Top" Width="712"/>
+                    <Label x:Name="Txt_BookName" Content="Book Name" HorizontalAlignment="Left" Margin="10,261,0,0" VerticalAlignment="Top" Width="107" Height="27"/>
+                    <TextBox x:Name="txt_BookName" HorizontalAlignment="Left" Height="23" Margin="106,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                    <Label Content="Author" HorizontalAlignment="Left" Margin="346,265,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Author" HorizontalAlignment="Left" Height="23" Margin="426,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                    <Button x:Name="btn_AddBook" Content="Add Book" HorizontalAlignment="Left" Margin="10,297,0,0" VerticalAlignment="Top" Width="107"/>
+                    <Button x:Name="btn_EditBook" Content="Edit Book" HorizontalAlignment="Left" Margin="152,297,0,0" VerticalAlignment="Top" Width="105"/>
+                    <Button x:Name="btn_DeleteBook" Content="Delete Book" HorizontalAlignment="Left" Margin="281,297,0,0" VerticalAlignment="Top" Width="112" />
+                    <Button x:Name="btn_IssueBook" Content="Issue Book" HorizontalAlignment="Left" Margin="426,297,0,0" VerticalAlignment="Top" Width="112" />
+                    <Button x:Name="btn_ReturnBook" Content="Return Book" HorizontalAlignment="Left" Margin="578,297,0,0" VerticalAlignment="Top" Width="112" />
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabItem_Users" Header="Users">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="lbl_UserNameSearch" Content="User Name" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Top" Width="135"/>
+                    <TextBox x:Name="txt_UserNameSearch" HorizontalAlignment="Left" Height="23" Margin="162,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402"/>
+                    <Button x:Name="btn_UserSearch" Content="Search" HorizontalAlignment="Left" Margin="605,10,0,0" VerticalAlignment="Top" Width="112"/>
+                    <DataGrid x:Name="DGV_Users" HorizontalAlignment="Left" Height="215" Margin="27,41,0,0" VerticalAlignment="Top" Width="712"/>
+                    <Label x:Name="Txt_FullName" Content="Full Name" HorizontalAlignment="Left" Margin="10,261,0,0" VerticalAlignment="Top" Width="107" Height="27"/>
+                    <TextBox x:Name="txt_UserName" HorizontalAlignment="Left" Height="23" Margin="106,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+                    <Label Content="Age" HorizontalAlignment="Left" Margin="346,265,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Age" HorizontalAlignment="Left" Height="23" Margin="426,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                    <Button x:Name="btn_Adduser" Content="Add User" HorizontalAlignment="Left" Margin="10,297,0,0" VerticalAlignment="Top" Width="107"/>
+                    <Button x:Name="btn_EditUser" Content="Edit User" HorizontalAlignment="Left" Margin="152,297,0,0" VerticalAlignment="Top" Width="105"/>
+                    <Button x:Name="btn_DeleteUser" Content="Delete User" HorizontalAlignment="Left" Margin="281,297,0,0" VerticalAlignment="Top" Width="112" />
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
