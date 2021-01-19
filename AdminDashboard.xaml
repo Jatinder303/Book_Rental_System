@@ -22,7 +22,7 @@
                     <TextBox x:Name="txt_BookName" HorizontalAlignment="Left" Height="23" Margin="106,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
                     <Label Content="Author" HorizontalAlignment="Left" Margin="346,265,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txt_Author" HorizontalAlignment="Left" Height="23" Margin="426,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
-                    <Button x:Name="btn_AddBook" Content="Add Book" HorizontalAlignment="Left" Margin="10,297,0,0" VerticalAlignment="Top" Width="107"/>
+                    <Button x:Name="btn_AddBook" Content="Add Book" HorizontalAlignment="Left" Margin="10,297,0,0" VerticalAlignment="Top" Width="107" Click="btn_AddBook_Click"/>
                     <Button x:Name="btn_EditBook" Content="Edit Book" HorizontalAlignment="Left" Margin="152,297,0,0" VerticalAlignment="Top" Width="105"/>
                     <Button x:Name="btn_DeleteBook" Content="Delete Book" HorizontalAlignment="Left" Margin="281,297,0,0" VerticalAlignment="Top" Width="112" />
                     <Button x:Name="btn_IssueBook" Content="Issue Book" HorizontalAlignment="Left" Margin="426,297,0,0" VerticalAlignment="Top" Width="112" />

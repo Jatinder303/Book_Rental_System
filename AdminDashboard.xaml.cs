@@ -33,5 +33,24 @@ namespace Book_Rental_System
         {
             DGV_Books.ItemsSource = objDb.ListBooks("%").DefaultView;
         }
+
+        private void btn_AddBook_Click(object sender, RoutedEventArgs e)
+        {
+            if (txt_BookName.Text != "" && txt_Author.Text != "")
+            {
+                bool bookadd = objDb.AddBooks(txt_BookName.Text, txt_Author.Text);
+                if (bookadd == true)
+                {
+                    MessageBox.Show("Book Added");
+                    txt_Author.Clear();
+                    txt_BookName.Clear();
+                    DGV_Books.ItemsSource = objDb.ListBooks("%").DefaultView;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please insert the book data");
+            }
+        }
     }
 }

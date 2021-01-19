@@ -40,5 +40,35 @@ namespace Book_Rental_System
             }
         }
 
+        public bool AddBooks(string bookname, string author)
+        {
+            bool addbook = false;
+            try
+            {
+                SqlStr.Connection = SqlConn;
+                SqlStmt = "Insert into Books (BookName,Author, Available) values (@BookName, @Author, @Available) ";
+                using (SqlStr = new SqlCommand(SqlStmt, SqlConn))
+                {
+                    SqlStr.Parameters.AddWithValue("@BookName", bookname);
+                    SqlStr.Parameters.AddWithValue("@Author", author);
+                    SqlStr.Parameters.AddWithValue("@Available", "Yes");
+                    SqlConn.Open();
+                    int SqlReader = SqlStr.ExecuteNonQuery();
+                    if (SqlReader > 0)
+                    {
+                        addbook = true;
+                    }
+                    SqlConn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database Exception" + ex.Message);
+                SqlConn.Close();
+            }
+            return addbook;
+        }
+
     }
 }
