@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book_Rental_System"
         mc:Ignorable="d"
-        Title="Book Rental System - Admin Dashboard Page" Height="450" Width="800">
+        Title="Book Rental System - Admin Dashboard Page" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid Background="#FFF1B55E">
         <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="592,10,0,0" VerticalAlignment="Top" Width="86" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnReturn_Click"/>
         <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Width="88" FontSize="18" FontFamily="Script MT Bold" Height="44" Background="#FF3EA5D4" Foreground="#FFF9F6F6" Click="btnLogout_Click"/>

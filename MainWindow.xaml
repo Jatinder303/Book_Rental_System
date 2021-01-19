@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Book Rental System - Login Page" Height="450" Width="800">
     <Grid Background="#FFF1B55E">
-        <Label x:Name="lbl_WelcomeText" Content="Welcome to Book Rental System" HorizontalAlignment="Left" Margin="226,37,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold"/>
+
+        <Label x:Name="lbl_WelcomeText" Content="Welcome to Book Rental System" HorizontalAlignment="Left" Margin="226,37,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Script MT Bold" Grid.ColumnSpan="2"/>
         <Label x:Name="lbl_UserName" Content="User Name" HorizontalAlignment="Left" Margin="226,113,0,0" VerticalAlignment="Top" FontFamily="Script MT Bold" FontSize="20"/>
         <Label x:Name="lbl_Password" Content="Password" HorizontalAlignment="Left" Margin="226,169,0,0" VerticalAlignment="Top" FontFamily="Script MT Bold" FontSize="20"/>
         <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="370,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>

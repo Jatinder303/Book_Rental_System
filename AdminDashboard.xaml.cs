@@ -8,6 +8,7 @@ namespace Book_Rental_System
     public partial class AdminDashboard : Window
     {
         public string FullName;
+        DatabaseManager objDb = new DatabaseManager();
         public AdminDashboard(string fullName)
         {
             InitializeComponent();
@@ -28,6 +29,9 @@ namespace Book_Rental_System
             this.Close();
         }
 
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DGV_Books.ItemsSource = objDb.ListBooks("%").DefaultView;
+        }
     }
 }
